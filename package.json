@@ -1,0 +1,13 @@
+{
+  "name": "graphql-crash-course",
+  "version": "1.0.0",
+  "description": "Graphql using nodejs with apollo server",
+  "scripts": {
+    "local": "nodemon src/server.js"
+  },
+  "main": "src/server.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
