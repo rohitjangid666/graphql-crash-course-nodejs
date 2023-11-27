@@ -1,4 +1,5 @@
 const users = require('../../../../db/users.json')
+const reviews = require('../../../../db/reviews.json')
 
 const userQueries = {
   getUsers() {
@@ -9,4 +10,14 @@ const userQueries = {
   },
 }
 
-module.exports = userQueries
+const userChildrenQueries = {
+  // type User
+
+  User: {
+    reviews(parent) {
+      return reviews.filter(review => review.userId === parent.id)
+    },
+  },
+}
+
+module.exports = { userQueries, userChildrenQueries }

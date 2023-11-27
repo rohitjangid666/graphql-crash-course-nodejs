@@ -4,7 +4,7 @@
 const courseTypeDef = require('./typesDefs/courseTypeDef')
 const courseQuery = require('./typesDefs/query/course.query')
 
-const reviewTypeDef = require('./typesDefs/reviewTypeDet')
+const reviewTypeDef = require('./typesDefs/reviewTypeDef')
 const reviewQuery = require('./typesDefs/query/review.query')
 
 const userTypeDef = require('./typesDefs/userTypeDef')

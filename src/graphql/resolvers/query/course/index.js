@@ -1,4 +1,5 @@
 const courses = require('../../../../db/courses.json')
+const reviews = require('../../../../db/reviews.json')
 
 const courseQueries = {
   getCourses() {
@@ -9,4 +10,13 @@ const courseQueries = {
   },
 }
 
-module.exports = courseQueries
+const courseChildrenQueries = {
+  // type Course
+  Course: {
+    reviews(parent) {
+      return reviews.filter(review => review.courseId === parent.id)
+    },
+  },
+}
+
+module.exports = { courseQueries, courseChildrenQueries }

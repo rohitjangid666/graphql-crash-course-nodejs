@@ -1,7 +1,7 @@
 const reviewTypeDef = `#graphql
   type Review {
     id: ID!
-    rating: Int!
+    rating: Float!
     content: String!
     createdAt: String!
     course: Course!

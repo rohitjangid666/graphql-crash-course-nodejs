@@ -1,6 +1,6 @@
-const courseQueries = require('./query/course')
-const userQueries = require('./query/user')
-const reviewQueries = require('./query/review')
+const { courseQueries, courseChildrenQueries } = require('./query/course')
+const { userQueries, userChildrenQueries } = require('./query/user')
+const { reviewQueries, reviewChildrenQueries } = require('./query/review')
 
 const resolvers = {
   Query: {
@@ -8,6 +8,9 @@ const resolvers = {
     ...userQueries,
     ...reviewQueries,
   },
+  ...courseChildrenQueries,
+  ...reviewChildrenQueries,
+  ...userChildrenQueries,
 }
 
 module.exports = resolvers
