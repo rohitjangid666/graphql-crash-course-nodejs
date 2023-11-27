@@ -12,7 +12,8 @@ const server = new ApolloServer({
 
 startStandaloneServer(server, {
   listen: config.port,
-}).then(response => {
-  console.log('Listening to port:', config.port)
-  console.log('response', response)
 })
+  .then(response => {
+    console.log('Listening to port:', response.url)
+  })
+  .catch(error => console.log('error occurred at standaloneServer', error))
