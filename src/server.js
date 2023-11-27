@@ -1,8 +1,18 @@
-import dotenv from 'dotenv'
+const { ApolloServer } = require('@apollo/server')
+const { startStandaloneServer } = require('@apollo/server/standalone')
 
-// initialize env
-dotenv.config({
-  path: './.env',
+const typeDefs = require('./graphql/schemas')
+const resolvers = require('./graphql/resolvers')
+const config = require('./configs/config')
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
 })
 
-console.log('Node.js server will start on port:', process.env.PORT)
+startStandaloneServer(server, {
+  listen: config.port,
+}).then(response => {
+  console.log('Listening to port:', config.port)
+  console.log('response', response)
+})

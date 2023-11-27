@@ -15,7 +15,6 @@
     "url": "git+https://github.com/rohitjangid666/graphql-crash-course-nodejs.git"
   },
   "author": "Rohit Jangid",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/rohitjangid666/graphql-crash-course-nodejs/issues"
   },
