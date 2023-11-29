@@ -9,6 +9,7 @@ const reviewQuery = require('./typesDefs/query/review.query')
 
 const userTypeDef = require('./typesDefs/userTypeDef')
 const userQuery = require('./typesDefs/query/user.query')
+const courseMutation = require('./typesDefs/mutation/course.mutation')
 
 module.exports = [
   // type defs
@@ -20,4 +21,7 @@ module.exports = [
   courseQuery,
   reviewQuery,
   userQuery,
+
+  // mutations
+  courseMutation,
 ]
